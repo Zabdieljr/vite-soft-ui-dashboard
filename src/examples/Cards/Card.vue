@@ -4,7 +4,7 @@
       <div class="d-flex" :class="directionReverse ? reverseDirection : ''">
         <div>
           <div class="text-center shadow icon icon-shape border-radius-md" :class="iconBackground">
-            <i class="text-lg opacity-10" :class="iconClass" aria-hidden="true"></i>
+            <i class="text-lg opacity-10" :class="iconClass" @click="redirectToUrl" aria-hidden="true"></i>
           </div>
         </div>
         <div :class="contentClass">
@@ -65,11 +65,21 @@ export default {
       type: String,
       default: ""
     },
+    url: {
+      type: String,
+      default: ""
+    }
   },
   data() {
     return {
       reverseDirection: "flex-row-reverse justify-content-between",
     };
   },
+  methods: {
+    redirectToUrl() {
+      window.open(this.url, '_blank');
+    },
+  },
+
 };
 </script>

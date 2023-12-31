@@ -8,6 +8,7 @@
           :percentage="stats.money.percentage"
           :icon-class="stats.money.iconClass"
           :icon-background="stats.iconBackground"
+          :url="stats.money.url"
           direction-reverse
         ></card>
       </div>
@@ -18,6 +19,7 @@
           :percentage="stats.users.percentage"
           :icon-class="stats.users.iconClass"
           :icon-background="stats.iconBackground"
+          :url="stats.users.url"
           direction-reverse
         ></card>
       </div>
@@ -29,6 +31,7 @@
           :icon-class="stats.clients.iconClass"
           :icon-background="stats.iconBackground"
           :percentage-color="stats.clients.percentageColor"
+          :url="stats.clients.url"
           direction-reverse
         ></card>
       </div>
@@ -39,6 +42,7 @@
           :percentage="stats.sales.percentage"
           :icon-class="stats.sales.iconClass"
           :icon-background="stats.iconBackground"
+          :url="stats.sales.url"
           direction-reverse
         ></card>
       </div>
@@ -175,29 +179,33 @@ export default {
       stats: {
         iconBackground: "bg-gradient-success",
         money: {
-          title: "Today's Money",
-          value: "$53,000",
-          percentage: "+55%",
+          title: "HHS's News",
+          value: "House Report",
+          percentage: "(2022)",
           iconClass: "ni ni-money-coins",
+          url: "https://iacc.hhs.gov/news/2023/report-to-congress-release.shtml",
         },
         users: {
-          title: "Today's Users",
-          value: "2,300",
-          percentage: "+3%",
+          title: "NAS",
+          value: "National Autistic",
+          percentage: "Society",
           iconClass: "ni ni-world",
+          url: "https://www.autism.org.uk/",
         },
         clients: {
-          title: "New Clients",
-          value: "+3,462",
-          percentage: "-2%",
+          title: "Article",
+          value: "The Conversation",
+          percentage: "",
           iconClass: "ni ni-paper-diploma",
           percentageColor: "text-danger",
+          url: "https://theconversation.com/us",
         },
         sales: {
-          title: "Sales",
-          value: "$103,430",
-          percentage: "+5%",
+          title: "ARI",
+          value: "Autism Research",
+          percentage: "Institute",
           iconClass: "ni ni-cart",
+          url: "https://autism.org/ari-funded-research-studies-2023/",
         },
       },
       sales: {
